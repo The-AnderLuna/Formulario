@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MT-09</title>
+    <link rel="icon" href="img/Logo 2.png" type="image/png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Incluye el archivo JavaScript de Bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+
+    <style>
+        body {
+            background-color: #19171d;
+            background-image: linear-gradient(90deg, rgba(47, 28, 42, 1) 0%, rgba(45, 54, 61, 1) 50%, rgba(19, 41, 65, 1) 100%);
+            font-family: 'Bebas Neue', sans-serif;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .form-container {
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .logo-container h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: #ffa626;
+        }
+
+        .container {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .btn-custom {
+            background-color: #ffa626;
+            border: none;
+        }
+
+        .btn-custom:hover {
+            background-color: #e69522;
+        }
+
+        header,
+        footer {
+            background-color: #222;
+            padding: 10px 0;
+            text-align: center;
+            color: white;
+        }
+
+        header {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            margin-top: auto;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+        }
+
+        .precio {
+            font-size: 34px;
+            color: #ffa626;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Encabezado -->
+    <header class="text-center py-3 d-flex justify-content-center align-items-center">
+        <h1 class="mr-3">YAMAHA</h1>
+        <img src="img/logo.webp" alt="Logo de Yamaha" class="logo">
+    </header>
+
+
+
+    <!-- Imagen encima del formulario -->
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-6 logo-container text-center">
+                <h1>MT-09</h1>
+                <img src="img/mt09.png" alt="Logo" class="img-fluid">
+
+                <p class="mt-3 precio"> $57.500.000</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- FORMULARIO -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 form-container">
+                <h2 class="mb-4 text-center">Formulario de Compra</h2>
+                <form id="formulario" novalidate>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="nombre">Nombre completo:</label>
+                                <input type="text" class="form-control" id="nombre"
+                                    placeholder="Ingresa tu nombre completo" required minlength="3">
+                                <div class="invalid-feedback">
+                                    Por favor, ingresa tu nombre completo.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="documento">Documento de identidad:</label>
+                                <input type="text" class="form-control" id="documento"
+                                    placeholder="Ingresa tu documento de identidad" required minlength="3"
+                                    maxlength="10">
+                                <div class="invalid-feedback">
+                                    Por favor, ingresa tu documento de identidad.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="telefono">Número de teléfono:</label>
+                                <input type="tel" class="form-control" id="telefono"
+                                    placeholder="Ingresa tu número de teléfono" required minlength="3" maxlength="10">
+                                <div class="invalid-feedback">
+                                    Por favor, ingresa tu número de teléfono.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="email">Correo electrónico:</label>
+                                <input type="email" class="form-control" id="email"
+                                    placeholder="Ingresa tu correo electrónico" required>
+                                <div class="invalid-feedback">
+                                    Por favor, ingresa un correo electrónico válido.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="direccion">Dirección:</label>
+                        <input type="text" class="form-control" id="direccion" placeholder="Ingresa tu dirección"
+                            required>
+                        <div class="invalid-feedback">
+                            Por favor, ingresa tu dirección.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="pais">País:</label>
+                        <select class="form-control" id="pais" required>
+                            <option value="">Selecciona tu país</option>
+                            <option value="argentina">Argentina</option>
+                            <option value="colombia">Colombia</option>
+                            <option value="mexico">México</option>
+                            <option value="espana">España</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Por favor, selecciona tu país.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Género:</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="genero" id="genero1" value="masculino"
+                                required>
+                            <label class="form-check-label" for="genero1">Masculino</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="genero" id="genero2" value="femenino"
+                                required>
+                            <label class="form-check-label" for="genero2">Femenino</label>
+                        </div>
+                        <div class="invalid-feedback d-block">
+                            Por favor, selecciona tu género.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Preferencias de contacto:</label><br>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="preferencia1" value="email">
+                            <label class="form-check-label" for="preferencia1">Correo electrónico</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="preferencia2" value="telefono">
+                            <label class="form-check-label" for="preferencia2">Teléfono</label>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <button type="button" class="btn btn-custom btn-block"
+                                onclick="validarFormulario()">Comprar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Tienda Yamaha. Todos los derechos reservados.</p>
+    </footer>
+
+
+ <!-- VALIDACIONES -->
+<script>
+    document.getElementById('documento').addEventListener('input', function (e) {
+        var input = e.target;
+        var valor = input.value;
+
+        if (!/^\d{0,}$/.test(valor)) { 
+            input.classList.add('is-invalid');
+            input.classList.remove('is-valid');
+        } else {
+            input.classList.remove('is-invalid');
+            input.classList.add('is-valid');
+        }
+    });
+
+    document.getElementById('telefono').addEventListener('input', function (e) {
+        var input = e.target;
+        var valor = input.value;
+
+        if (!/^\d{10}$/.test(valor)) {
+            input.classList.add('is-invalid');
+            input.classList.remove('is-valid');
+        } else {
+            input.classList.remove('is-invalid');
+            input.classList.add('is-valid');
+        }
+    });
+
+    function validarFormulario() {
+        var formulario = document.getElementById('formulario');
+        var campos = formulario.getElementsByClassName('form-control');
+        var valido = true;
+
+        for (var i = 0; i < campos.length; i++) {
+            var campo = campos[i];
+            if (campo.id === 'telefono') {
+                if (!/^\d{10}$/.test(campo.value)) {
+                    campo.classList.add('is-invalid');
+                    valido = false;
+                } else {
+                    campo.classList.remove('is-invalid');
+                    campo.classList.add('is-valid');
+                }
+            } else {
+                if (campo.checkValidity()) {
+                    campo.classList.remove('is-invalid');
+                    campo.classList.add('is-valid');
+                } else {
+                    campo.classList.add('is-invalid');
+                    valido = false;
+                }
+            }
+        }
+
+        if (valido) {
+            window.location.href = 'html/Gracias.html'; 
+        }
+    }
+</script>
+
+</body>
+
+</html>
